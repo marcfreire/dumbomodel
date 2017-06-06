@@ -1,0 +1,20 @@
+php_value short_open_tag on
+
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+php_flag  log_errors on
+
+php_value error_log  /var/www/html/secti/negrocosme/errors.log
+
+
+RewriteEngine On
+
+#para landing page
+RewriteRule ^(start)/?$ start/ [L,NC] 
+#para filtro por tags
+RewriteRule ^(tags)/([0-9a-z-_]+)/([0-9]+)/?$ home?tag=$3 [L,NC] 
+RewriteRule ^(tags)/(all)/?$ home [L,NC] 
+#para a rede social
+RewriteRule ^([0-9a-z-_]+)/?$ social/$1.php [L,NC] 
+#RewriteRule ^([0-9a-z-_]+)/?$ social/$1.php [L,NC]
