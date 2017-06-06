@@ -1,7 +1,7 @@
 <?php
 
 define('__DEVELOPER', true);
-define('__WORK', '/secti/formulario');
+define('__WORK', '/secti/dumbomodel');
 define('__DAO_DEBUG', true);
 define('__OTIMIZE', true);
 define("__LOG", '/log/');
@@ -11,7 +11,7 @@ define("__NAME", 'local.testes');
 
 static $myconnections = [
     
-    'default' => "pgsql:dbname=formulario; user=postgres; password=123456; host=localhost; port=5432"
+    'default' => "pgsql:dbname=dumbomodel; user=postgres; password=123456; host=localhost; port=5432"
 ];
 
 static $myrequires= [
